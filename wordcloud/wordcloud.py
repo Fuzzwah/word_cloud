@@ -575,7 +575,7 @@ class WordCloud(object):
                 font, orientation=orientation)
             pos = (int(position[1] * self.scale),
                    int(position[0] * self.scale))
-            draw.text(pos, word, fill=color, font=transposed_font)
+            draw.text(pos, word.replace('_',' '), fill=color, font=transposed_font)
         return img
 
     def recolor(self, random_state=None, color_func=None, colormap=None):
